@@ -24,4 +24,6 @@ class DirectorService:
         self.dao.update(director)
 
     def delete(self, rid):
+        if not isinstance(rid, int):
+            raise Exception()
         self.dao.delete(rid)
